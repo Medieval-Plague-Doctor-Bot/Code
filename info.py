@@ -7,17 +7,16 @@ from tools import utils
 
 class info(commands.Cog):
   
-  def __init__(self,bot):
-    self.bot=bot
+  def __init__(self, bot):
+    self.bot = bot
     
-
-  @commands.command(description="get the info for the server")
+  @commands.command(description = "get the info for the server")
   @commands.guild_only()
-  @cooldown(1,3,commands.BucketType.user)
-  async def serverinfo(self,ctx):
-      em = discord.Embed(title="Server info",description="note that some things might be slighty inaccurate due to cache")
+  @cooldown(1, 3, commands.BucketType.user)
+  async def serverinfo(self, ctx):
+      em = discord.Embed(title = "Server info", description = "note that some things might be slighty inaccurate due to cache")
       created = await  utils.time_formatter(ctx.guild.created_at)
-      em.add_field(name="Owner",value=ctx.guild.owner)
+      em.add_field(name = "Owner", value = ctx.guild.owner)
       em.add_field(name="Name", value=ctx.guild.name)      
       em.add_field(name="Server created",value = created)
       em.add_field(name="Roles",value=len(ctx.guild.roles))
@@ -73,7 +72,7 @@ class info(commands.Cog):
 
   @commands.command()
   @commands.guild_only()
-  @cooldown(1,3,commands.BucketType.user)
+  @cooldown(1, 3, commands.BucketType.user)
   async def botinfo(self,ctx):
     em=discord.Embed(title="My info")
     em.add_field(name="prefix",value="^")
