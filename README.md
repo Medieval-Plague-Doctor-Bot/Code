@@ -1,9 +1,5 @@
 # Medieval-Plague-Doctor-Bot
 
-Bot is being deprecated
-
-https://github.com/Medieval-Plague-Doctor-Bot/my_bot for more info
-
 Small code snippets from the bot
 
 Made for fun and educational purposes by `!!!ahhhhh!!!#8921`
